@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8 · Definición: PRDs y specs · PM Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="../index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a class="active" href="08-definicion.html">ES</a><a href="../../en/guia/08-definicion.html">EN</a><a href="../../pt/guia/08-definicion.html">PT</a></div>
+<form class="navsearch" action="../buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="../index.html">Inicio</a>
+<div class="nav-group">🧭 Guía</div>
+<a href="01-fundamentos.html">1 · Fundamentos SaaS B2B</a>
+<a href="02-entender-la-empresa.html">2 · Entender la empresa</a>
+<a href="03-entender-el-producto.html">3 · Entender el producto</a>
+<a href="04-discovery.html">4 · Discovery</a>
+<a href="05-experimentacion.html">5 · Experimentación y validación</a>
+<a href="06-metricas.html">6 · Métricas</a>
+<a href="07-priorizacion.html">7 · Priorización y estrategia</a>
+<a href="08-definicion.html" class="active">8 · Definición: PRDs y specs</a>
+<a href="09-delivery.html">9 · Delivery y stakeholders</a>
+<a href="10-gtm.html">10 · Go-to-Market</a>
+<a href="11-crecimiento.html">11 · Modelos de crecimiento</a>
+<div class="nav-group">Secciones</div>
+<a href="../casos.html">🧪 Casos aplicados</a>
+<a href="../entrevistas.html">🎤 Preparación entrevistas</a>
+<a href="../experiment-log.html">📊 Experiment log</a>
+<a href="../backlog.html">🗺️ Backlog del hub</a>
+</nav>
+<main>
+<h1>8 · Definición — PRDs, specs y reglas de negocio</h1>
+
+<h2>8.1 Los documentos y su jerarquía</h2>
+<table>
+<thead><tr><th>Documento</th><th>Responde</th><th>Cuándo</th></tr></thead>
+<tbody>
+<tr><td><strong>PR/FAQ</strong> (Amazon)</td><td>El <strong>por qué</strong> y la experiencia del cliente (narrativa)</td><td>Antes de decidir construir. Documento vivo que se actualiza con el discovery y alimenta al PRD</td></tr>
+<tr><td><strong>PRD</strong></td><td>El <strong>qué</strong> se construye: features, user stories, requisitos, reglas de negocio</td><td>Al pasar a definición</td></tr>
+<tr><td><strong>One-pager / spec</strong></td><td>Decisiones más chicas</td><td>Cambios acotados</td></tr>
+<tr><td><strong>Pitch</strong> (Shape Up, Basecamp)</td><td>Apuesta con <em>appetite</em> en vez de estimación; <em>rabbit holes</em> y <em>no-goals</em> identificados</td><td>Ciclos fijos</td></tr>
+</tbody>
+</table>
+
+<h2>8.2 Amazon Working Backwards / PR/FAQ</h2>
+<p>(Bryar &amp; Carr, <em>Working Backwards</em>, 2021.) Escribir el press release + FAQ <strong>antes</strong> de construir, como si el producto ya estuviera lanzado.</p>
+<ul>
+<li>Documento de ~6 páginas: 1 página de PR (headline, subtítulo, fecha, párrafo intro con cliente y beneficios) + FAQ interno y externo.</li>
+<li>Forcing function de customer-centricity — obliga a razonar desde el cliente.</li>
+<li><strong>«El hecho de que la mayoría de los PR/FAQ no se aprueben es una feature, no un bug.»</strong></li>
+<li>Regla de especificidad: no «transformar cómo colaboran los equipos» sino «reducir la generación de reportes de 4 horas a 15 minutos» (claim testeable).</li>
+<li>Reunión: circular el doc, 15–20 min de lectura silenciosa con comentarios, ~40 min de debate; truth-seeking, no selling.</li>
+<li>Usado para Kindle, Prime, AWS, Alexa.</li>
+</ul>
+
+<h2>8.3 Anatomía de un buen PRD</h2>
+<pre><code>problema con evidencia → outcome medible → solución propuesta →
+reglas de negocio → casos borde → FUERA DE ALCANCE →
+métricas de éxito → riesgos</code></pre>
+<p><strong>El fuera de alcance es la sección más importante y la más omitida.</strong></p>
+<ul>
+<li><strong>Nivel de detalle correcto</strong>: un PRD B2B de dominio complejo (nómina, compliance, cálculo) <strong>vive o muere por los casos borde y las reglas de negocio explícitas</strong>. Un PRD de UX simple muere si lo sobre-especificas y matas al diseñador.</li>
+<li><strong>Criterios de aceptación</strong> como comportamiento verificable: Given/When/Then cuando aporta; <strong>tabla de decisión cuando hay lógica combinatoria</strong>.</li>
+</ul>
+
+<h2>8.4 Especificar lógica de negocio compleja</h2>
+<p><em>(Mi diferenciador: dominio regulatorio multi-país.)</em> Herramientas:</p>
+<ul>
+<li><strong>Tablas de decisión</strong> — cada combinación de condiciones → resultado esperado. Auditables por legal y testeables por QA con el mismo artefacto.</li>
+<li><strong>Matrices país × regla</strong> — la misma feature con parámetros regulatorios distintos por jurisdicción.</li>
+<li><strong>Manejo de ambigüedad regulatoria</strong> — documentar la interpretación elegida, la fuente legal, y quién la validó. La ambigüedad no resuelta en el PRD se convierte en bug en producción.</li>
+</ul>
+
+<h2>Práctica</h2>
+<p>Elegir el dominio más complejo que haya especificado (ej.: motor de cálculo con lógica multi-país y casos borde regulatorios). Reescribirlo como PRD de portafolio: anonimizar, pero conservar la complejidad real — tablas de decisión, edge cases, decisiones abiertas y cómo las cerré.</p>
+
+<h2>Artefacto</h2>
+<ul>
+<li>1 PRD completo de dominio complejo (mi mejor trabajo, anonimizado).</li>
+<li>1 template de PRD propio con anotaciones de por qué cada sección existe.</li>
+<li>Una página «Cómo especifico lógica de negocio compleja» (tablas de decisión, matrices país × regla, ambigüedad regulatoria).</li>
+</ul>
+
+<div class="pager">
+<a class="prev" href="07-priorizacion.html">← 7 · Priorización y estrategia</a>
+<a class="next" href="09-delivery.html">9 · Delivery y stakeholders →</a>
+</div>
+</main>
+</div>
+</body>
+</html>

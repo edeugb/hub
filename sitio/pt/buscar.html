@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buscar · PM Hub</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a href="../es/buscar.html">ES</a><a href="../en/buscar.html">EN</a><a class="active" href="buscar.html">PT</a></div>
+<form class="navsearch" action="buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="index.html">Início</a>
+<div class="nav-group">🧭 Guia</div>
+<a href="guia/01-fundamentos.html">1 · Fundamentos de SaaS B2B</a>
+<a href="guia/02-entender-la-empresa.html">2 · Entender a empresa</a>
+<a href="guia/03-entender-el-producto.html">3 · Entender o produto</a>
+<a href="guia/04-discovery.html">4 · Discovery</a>
+<a href="guia/05-experimentacion.html">5 · Experimentação e validação</a>
+<a href="guia/06-metricas.html">6 · Métricas</a>
+<a href="guia/07-priorizacion.html">7 · Priorização e estratégia</a>
+<a href="guia/08-definicion.html">8 · Definição: PRDs e specs</a>
+<a href="guia/09-delivery.html">9 · Delivery e stakeholders</a>
+<a href="guia/10-gtm.html">10 · Go-to-Market</a>
+<a href="guia/11-crecimiento.html">11 · Modelos de crescimento</a>
+<div class="nav-group">Seções</div>
+<a href="casos.html">🧪 Casos aplicados</a>
+<a href="entrevistas.html">🎤 Preparação entrevistas</a>
+<a href="experiment-log.html">📊 Experiment log</a>
+<a href="backlog.html">🗺️ Backlog do hub</a>
+</nav>
+<main>
+<h1>Buscar</h1>
+<p class="ck-note">Busque por palavras em todo o guia e nas seções. Não diferencia maiúsculas nem acentos. Cada resultado leva à página; lá você pode usar Ctrl+F para pular até a frase exata.</p>
+<input id="q" class="search-input" type="search" placeholder="Digite uma ou mais palavras…" autofocus>
+<p class="ck-note"><label><input type="checkbox" id="all-langs"> Buscar também em espanhol e inglês</label></p>
+<p id="count" class="ck-note"></p>
+<div id="results"></div>
+</main>
+</div>
+<script src="../search-index.js"></script>
+<script>
+(function(){
+var LANG='pt';
+var M={none:'Sem resultados.',res:' resultado(s)'};
+function norm(s){var o='';for(var i=0;i<s.length;i++){var c=s.charAt(i),d;try{d=c.normalize('NFD').charAt(0)}catch(e){d=c}o+=d}return o.toLowerCase()}
+var IDX=(window.PMHUB_INDEX||[]).map(function(e){return{l:e.l,u:e.u,t:e.t,x:e.x,nt:norm(e.t),nx:norm(e.x)}});
+var q=document.getElementById('q'),all=document.getElementById('all-langs'),res=document.getElementById('results'),cnt=document.getElementById('count');
+function count(h,w){var n=0,i=0;while((i=h.indexOf(w,i))!==-1&&n<50){n++;i+=w.length}return n}
+function snippetInto(el,text,ntext,words){
+ var first=-1;for(var k=0;k<words.length;k++){var p=ntext.indexOf(words[k]);if(p!==-1&&(first===-1||p<first))first=p}
+ if(first===-1)first=0;
+ var s=Math.max(0,first-70),e=Math.min(text.length,first+150);
+ var snip=text.slice(s,e),nsnip=ntext.slice(s,e);
+ var ranges=[];
+ words.forEach(function(w){var i=0;while((i=nsnip.indexOf(w,i))!==-1){ranges.push([i,i+w.length]);i+=w.length}});
+ ranges.sort(function(a,b){return a[0]-b[0]});
+ var mg=[];ranges.forEach(function(r){if(mg.length&&r[0]<=mg[mg.length-1][1]){if(r[1]>mg[mg.length-1][1])mg[mg.length-1][1]=r[1]}else mg.push([r[0],r[1]])});
+ if(s>0)el.appendChild(document.createTextNode('… '));
+ var pos=0;
+ mg.forEach(function(r){if(r[0]>pos)el.appendChild(document.createTextNode(snip.slice(pos,r[0])));var mk=document.createElement('mark');mk.textContent=snip.slice(r[0],r[1]);el.appendChild(mk);pos=r[1]});
+ if(pos<snip.length)el.appendChild(document.createTextNode(snip.slice(pos)));
+ if(e<text.length)el.appendChild(document.createTextNode(' …'));
+}
+function run(){
+ var words=norm(q.value).split(/\s+/).filter(Boolean);
+ res.innerHTML='';cnt.textContent='';
+ if(!words.length)return;
+ var pool=IDX.filter(function(e){return all.checked||e.l===LANG});
+ var hits=[];
+ pool.forEach(function(e){
+  var hay=e.nt+' '+e.nx;
+  var okAll=words.every(function(w){return hay.indexOf(w)!==-1});
+  if(!okAll)return;
+  var sc=0;words.forEach(function(w){sc+=count(e.nx,w)});
+  if(words.every(function(w){return e.nt.indexOf(w)!==-1}))sc+=100;
+  hits.push({e:e,sc:sc});
+ });
+ hits.sort(function(a,b){return b.sc-a.sc});
+ cnt.textContent=hits.length?hits.length+M.res:M.none;
+ hits.slice(0,50).forEach(function(h){
+  var e=h.e;
+  var a=document.createElement('a');a.className='result';a.href='../'+e.u;
+  var t=document.createElement('div');t.className='result-t';t.textContent=e.t;
+  var b=document.createElement('span');b.className='result-lang';b.textContent=(e.l||'').toUpperCase();t.appendChild(b);
+  a.appendChild(t);
+  var sn=document.createElement('div');sn.className='result-s';snippetInto(sn,e.x,e.nx,words);a.appendChild(sn);
+  res.appendChild(a);
+ });
+}
+q.addEventListener('input',run);
+all.addEventListener('change',run);
+var q0=new URLSearchParams(location.search).get('q');
+if(q0){q.value=q0}
+run();
+})();
+</script>
+</body>
+</html>

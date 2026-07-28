@@ -1,0 +1,6 @@
+# Configuración local de Claude Code (específica de esta máquina, no compartir)
+.claude/
+
+# Basura de SO
+Thumbs.db
+.DS_Store

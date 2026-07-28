@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 · Experimentação e validação · PM Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="../index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a href="../../es/guia/05-experimentacion.html">ES</a><a href="../../en/guia/05-experimentacion.html">EN</a><a class="active" href="05-experimentacion.html">PT</a></div>
+<form class="navsearch" action="../buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="../index.html">Início</a>
+<div class="nav-group">🧭 Guia</div>
+<a href="01-fundamentos.html">1 · Fundamentos de SaaS B2B</a>
+<a href="02-entender-la-empresa.html">2 · Entender a empresa</a>
+<a href="03-entender-el-producto.html">3 · Entender o produto</a>
+<a href="04-discovery.html">4 · Discovery</a>
+<a href="05-experimentacion.html" class="active">5 · Experimentação e validação</a>
+<a href="06-metricas.html">6 · Métricas</a>
+<a href="07-priorizacion.html">7 · Priorização e estratégia</a>
+<a href="08-definicion.html">8 · Definição: PRDs e specs</a>
+<a href="09-delivery.html">9 · Delivery e stakeholders</a>
+<a href="10-gtm.html">10 · Go-to-Market</a>
+<a href="11-crecimiento.html">11 · Modelos de crescimento</a>
+<div class="nav-group">Seções</div>
+<a href="../casos.html">🧪 Casos aplicados</a>
+<a href="../entrevistas.html">🎤 Preparação entrevistas</a>
+<a href="../experiment-log.html">📊 Experiment log</a>
+<a href="../backlog.html">🗺️ Backlog do hub</a>
+</nav>
+<main>
+<h1>5 · Experimentação, MVPs e validação</h1>
+
+<p><strong>As «dores rentáveis» se detectam com evidência de willingness-to-pay e tamanho, não com opiniões.</strong> Um problema vale a pena se dói, é urgente, carece de alternativas e afeta um segmento com orçamento.</p>
+
+<h2>5.1 Hierarquia de evidência (do barato ao caro)</h2>
+<pre><code>entrevista → fake door / landing → protótipo clicável →
+concierge / Wizard of Oz → MVP funcional → beta fechada → GA</code></pre>
+<p><strong>A disciplina é usar o degrau mais barato que responda à pergunta de risco.</strong> Regra: suba do barato ao caro — valide demanda antes de construir, valide delivery antes de automatizar.</p>
+
+<h2>5.2 MVP ≠ produto pequeno</h2>
+<p>MVP = <strong>o experimento mínimo que valida a hipótese mais arriscada</strong> (Ries: «a versão que permite coletar a máxima quantidade de aprendizado validado com o menor esforço»). Em B2B, muitas vezes o «MVP» é uma venda manual + planilha + promessa, não código.</p>
+<p><strong>Tipos de MVP</strong> (escolher pelo maior risco, não pelo conforto):</p>
+<ul>
+<li>Validação de <strong>demanda</strong>: landing, fake door, crowdfunding.</li>
+<li>Validação <strong>manual</strong>: concierge, Wizard of Oz.</li>
+<li>Validação de <strong>produto</strong>: single-feature, piecemeal, protótipo.</li>
+<li>Em B2B: <strong>paid pilots, design partners, MVPs internos</strong>.</li>
+</ul>
+
+<h2>5.3 Métodos de validação de demanda</h2>
+<table>
+<thead><tr><th>Método</th><th>O que é</th><th>O que prova</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td><strong>Fake door / painted door</strong></td><td>Botão real para feature inexistente → «em breve» + opt-in</td><td>Demanda por uma feature específica dentro de um produto com usuários. O clique É o experimento: prova interesse, não satisfação</td><td>Ideal para priorizar roadmap: fake doors na frente de 10 ideias e deixar o clique decidir, não o stakeholder mais barulhento</td></tr>
+<tr><td><strong>Landing page</strong></td><td>Pitch do produto inteiro para visitantes novos + waitlist</td><td>Desejabilidade e pricing</td><td>O Buffer testou seus planos assim; o Dropbox usou um vídeo que gerou 70.000 signups</td></tr>
+<tr><td><strong>Concierge</strong></td><td>Você entrega o valor manualmente e o usuário SABE que há humanos</td><td><strong>Generativo</strong> — você aprende O QUE construir. Não escala por design (e tudo bem)</td><td>Airbnb, Food on the Table</td></tr>
+<tr><td><strong>Wizard of Oz</strong></td><td>Parece automatizado, mas humanos operam por trás; o usuário NÃO sabe</td><td><strong>Avaliativo</strong> — testa se o produto automatizado será usado/pago</td><td>Aardvark (Google, US$ 50M), CardMunch (LinkedIn)</td></tr>
+<tr><td><strong>Pré-vendas / paid pilots / design partners</strong></td><td>Compromisso econômico antes de construir</td><td>O sinal mais forte de WTP em B2B</td><td>3–5 clientes co-desenhando</td></tr>
+</tbody>
+</table>
+<p><strong>Sequência recomendada</strong>: concierge para aprender o que construir → Wizard of Oz para testar se o produto automatizado vende.</p>
+
+<div class="aside aside-note">
+<div class="aside-title">📝 Nota ética</div>
+<p>No Wizard of Oz, muitos times revelam que a beta é «powered by our team» e nunca coletam dados sensíveis sob falsos pretextos.</p>
+</div>
+
+<h2>5.4 Particularidades B2B</h2>
+<p><strong>O A/B testing clássico quase nunca funciona</strong>: populações pequenas, contas ≠ usuários, contratos. Substitutos:</p>
+<ul>
+<li>Pilotos pagos.</li>
+<li>Design partners (3–5 clientes co-desenhando).</li>
+<li>Betas fechadas <strong>com critérios de sucesso pactuados</strong>.</li>
+<li>Protótipos em sessões de venda.</li>
+</ul>
+
+<h3>POC vs Piloto vs Beta (confundi-los queima clientes)</h3>
+<table>
+<thead><tr><th></th><th>Prova</th><th>Condições</th></tr></thead>
+<tbody>
+<tr><td><strong>POC</strong></td><td>Factibilidade técnica</td><td>Ambiente do cliente, caso restrito</td></tr>
+<tr><td><strong>Piloto</strong></td><td>Valor em condições reais</td><td>Com critérios de saída definidos</td></tr>
+<tr><td><strong>Beta</strong></td><td>Escala e qualidade</td><td>Grupo mais amplo, pré-GA</td></tr>
+</tbody>
+</table>
+
+<h2>5.5 A hipótese bem escrita</h2>
+<blockquote><p>«Acreditamos que <strong>[segmento]</strong> tem <strong>[problema]</strong>. Se <strong>[intervenção]</strong>, veremos <strong>[métrica]</strong> se mover <strong>[quanto]</strong> em <strong>[prazo]</strong>. Saberemos que falhamos se <strong>[critério de kill]</strong>.»</p></blockquote>
+<p><strong>O critério de kill definido ANTES é o que separa experimentação de teatro.</strong> (Regra de Cagan sobre limiares: sem um limiar pré-comprometido, qualquer resultado vira ambíguo e o time lança mesmo assim.)</p>
+
+<h2>Prática</h2>
+<p>Documentar um caso real em que usei um degrau barato de validação (ex.: protótipo HTML mostrado a clientes antes de construir). Escrever a hipótese formal retrospectivamente: o que aprendi, o que mudei. Se nunca defini critério de kill: fazer agora para um experimento em andamento.</p>
+
+<h2>Artefato</h2>
+<ul>
+<li>Um <a href="../experiment-log.html">experiment log</a> com 3–5 experimentos reais: hipótese, método, resultado, decisão.</li>
+<li>Um guia próprio: «Como eu valido em B2B quando não posso fazer A/B testing».</li>
+</ul>
+
+<div class="pager">
+<a class="prev" href="04-discovery.html">← 4 · Discovery</a>
+<a class="next" href="06-metricas.html">6 · Métricas →</a>
+</div>
+</main>
+</div>
+</body>
+</html>

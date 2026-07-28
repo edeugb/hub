@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 · Discovery · PM Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="../index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a href="../../es/guia/04-discovery.html">ES</a><a href="../../en/guia/04-discovery.html">EN</a><a class="active" href="04-discovery.html">PT</a></div>
+<form class="navsearch" action="../buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="../index.html">Início</a>
+<div class="nav-group">🧭 Guia</div>
+<a href="01-fundamentos.html">1 · Fundamentos de SaaS B2B</a>
+<a href="02-entender-la-empresa.html">2 · Entender a empresa</a>
+<a href="03-entender-el-producto.html">3 · Entender o produto</a>
+<a href="04-discovery.html" class="active">4 · Discovery</a>
+<a href="05-experimentacion.html">5 · Experimentação e validação</a>
+<a href="06-metricas.html">6 · Métricas</a>
+<a href="07-priorizacion.html">7 · Priorização e estratégia</a>
+<a href="08-definicion.html">8 · Definição: PRDs e specs</a>
+<a href="09-delivery.html">9 · Delivery e stakeholders</a>
+<a href="10-gtm.html">10 · Go-to-Market</a>
+<a href="11-crecimiento.html">11 · Modelos de crescimento</a>
+<div class="nav-group">Seções</div>
+<a href="../casos.html">🧪 Casos aplicados</a>
+<a href="../entrevistas.html">🎤 Preparação entrevistas</a>
+<a href="../experiment-log.html">📊 Experiment log</a>
+<a href="../backlog.html">🗺️ Backlog do hub</a>
+</nav>
+<main>
+<h1>4 · Discovery</h1>
+
+<p><strong>O trabalho é ler os sinais sem ficar no que as pessoas pedem literalmente — é preciso chegar ao job a ser feito por trás do pedido.</strong></p>
+<p>Discovery não é uma fase, é um hábito — mas sua <strong>intensidade depende sim do estágio</strong> (ver tabela em <a href="03-entender-el-producto.html">Entender o produto</a>). Teresa Torres (<em>Continuous Discovery Habits</em>, 2021) define assim: no mínimo entrevistas semanais com clientes, pelo time que constrói, atividades de pesquisa pequenas, em busca de um outcome desejado.</p>
+
+<h2>4.1 Dor rentável</h2>
+<p><strong>Dor rentável = dor + frequência + orçamento + urgência.</strong> Framework prático:</p>
+<ol>
+<li>A dor custa dinheiro mensurável ao cliente (multas, horas-pessoa, churn dos funcionários dele)?</li>
+<li>Ele já está gastando para resolvê-la mal (Excel, consultores, headcount)? <strong>O gasto atual é a melhor prova de willingness to pay.</strong></li>
+<li>Quem tem o orçamento e quão perto está da dor?</li>
+<li>A dor é recorrente ou episódica? Recorrente → assinatura; episódica → difícil de monetizar em SaaS.</li>
+</ol>
+<p>Em B2B, problemas de time/departamento têm mais orçamento e prioridade do que os individuais.</p>
+
+<h2>4.2 Produto JÁ lançado · Evidência retrospectiva</h2>
+<p>O discovery B2B é tanto <strong>arqueologia de dados internos</strong> quanto entrevistas.</p>
+<p><strong>Fontes que já existem</strong> (onde está a evidência sem precisar gerá-la):</p>
+<ul>
+<li><strong>Tickets de suporte</strong> — agrupar em clusters de dor, não ler um a um.</li>
+<li><strong>Dados de uso</strong> — onde os usuários caem, quais features ninguém toca.</li>
+<li><strong>Transcrições de venda</strong> — a dor sai crua quando o cliente ainda não comprou.</li>
+<li><strong>Churned &amp; lost deals</strong> — a fonte mais honesta: por que saíram ou não fecharam.</li>
+<li>Objeções comerciais e requests de RFPs perdidas.</li>
+</ul>
+<p><strong>Quem entrevistar no listening tour externo</strong> (um mix, não só quem vai dizer sim):</p>
+<ul>
+<li><strong>Felizes</strong> — o que os engaja e que valor percebem (para não quebrar).</li>
+<li><strong>Frustrados</strong> — onde dói hoje com o produto na mão.</li>
+<li><strong>Churned</strong> — por que pararam de pagar; o diagnóstico mais brutal e mais útil.</li>
+<li><strong>Deals perdidos</strong> — o que faltou ou o que o concorrente fez melhor.</li>
+<li><strong>Pipeline ativo</strong> — o que estão avaliando agora antes de assinar.</li>
+</ul>
+<p><strong>Técnicas</strong> (como transformar sinal solto em decisões):</p>
+<ul>
+<li><strong>Entrevistas contínuas</strong> (Torres): cadência semanal, não um estudo único.</li>
+<li><strong>Jobs to be Done</strong>: o que o cliente «contrata» quando usa o produto.</li>
+<li><strong>Opportunity Solution Tree</strong>: conectar o resultado de negócio a oportunidades e soluções.</li>
+<li>Regra de ouro: <strong>separar problema de solução</strong>. O cliente é especialista na dor dele, não no seu roadmap.</li>
+</ul>
+
+<h2>4.3 Produto NÃO lançado · Evidência prospectiva</h2>
+<p>Aqui o método anterior desmorona: não há tickets, nem uso, nem clientes que tenham tocado o produto. <strong>Você não pode observar o passado; tem que provocar o futuro.</strong> Você troca «ler pegadas» por apostar com método: tornar suas crenças explícitas, ordená-las por risco e testar a mais perigosa antes de escrever uma linha de código.</p>
+
+<h3>Peça central: o mapa de suposições</h3>
+<p>Toda ideia nova se apoia numa pilha de crenças sobre <strong>desejabilidade</strong> (querem?), <strong>factibilidade</strong> (conseguimos construir?) e <strong>viabilidade</strong> (dá negócio?). O erro clássico é construir sobre as que damos por certas sem evidência.</p>
+<table>
+<thead><tr><th></th><th>Pouca evidência</th><th>Muita evidência</th></tr></thead>
+<tbody>
+<tr><td><strong>Alto risco</strong></td><td>🚨 <strong>Suposição mais perigosa</strong> — pode matar a ideia e não tem evidência. Desenhe um experimento barato JÁ</td><td>✅ <strong>Validar rápido</strong> — crítica mas respaldada; confirmar com pouco esforço e avançar</td></tr>
+<tr><td><strong>Baixo risco</strong></td><td>👀 <strong>Monitorar</strong> — pouco impacto se falhar; aprender aos poucos sem frear</td><td>📄 <strong>Documentar</strong> — terreno firme; registrar e não testar ativamente</td></tr>
+</tbody>
+</table>
+
+<h3>RAT antes de MVP</h3>
+<ul>
+<li><strong>MVP</strong>: você constrói a versão mínima do produto para aprender. Custa caro e ainda assim pode chegar tarde.</li>
+<li><strong>RAT (Riskiest Assumption Test)</strong>: você testa <strong>apenas a suposição mais arriscada</strong>, sem construir produto. Barato, rápido, e diz se vale a pena continuar.</li>
+<li>A causa nº 1 de morte de produtos novos não é a execução: é a <strong>falta de product-market fit</strong>. O RAT ataca exatamente isso, antes de gastar.</li>
+</ul>
+
+<h3>Métodos (do barato ao caro)</h3>
+<table>
+<thead><tr><th>Método</th><th>O que valida</th><th>Nota</th></tr></thead>
+<tbody>
+<tr><td><strong>Entrevista de problema</strong></td><td>Desejabilidade</td><td>Perguntar pela dor e pelo contexto de HOJE, nunca «você usaria minha ideia?». Passado concreto, não futuro hipotético</td></tr>
+<tr><td><strong>Fake door / landing</strong></td><td>Desejabilidade</td><td>Publicar a promessa e medir cliques/e-mails. Sem construir nada</td></tr>
+<tr><td><strong>Wizard of Oz</strong></td><td>Valor</td><td>O usuário acredita que há automação; por trás você resolve na mão</td></tr>
+<tr><td><strong>Concierge</strong></td><td>Aprendizado do fluxo</td><td>Entregar o resultado manualmente a poucos clientes; aprender o fluxo real antes de codificar</td></tr>
+<tr><td><strong>Pré-venda / LOI</strong></td><td>Viabilidade</td><td>O sinal mais forte: alguém coloca dinheiro antes de existir</td></tr>
+</tbody>
+</table>
+
+<h3>Proxies: discovery sem usuários do produto</h3>
+<ul>
+<li><strong>Clientes atuais que têm o problema</strong> mesmo que não o resolvam com você — a dor é real e observável.</li>
+<li><strong>Transcrições de venda</strong> onde a dor aparece espontânea.</li>
+<li><strong>Concorrentes e substitutos</strong>: se já pagam para resolver mal, a desejabilidade está meio validada.</li>
+<li><strong>O time comercial e de suporte</strong>: a voz do cliente mais barata e disponível no dia 1.</li>
+</ul>
+
+<h2>4.4 Autores-chave</h2>
+
+<h3>Teresa Torres — <em>Continuous Discovery Habits</em> (2021)</h3>
+<p>Ferramenta central: a <strong>Opportunity Solution Tree</strong> (2016). Estrutura: Outcome → Opportunities → Solutions → Assumption tests. Três tipos de outcomes: business, product, traction. Práticas: entrevistas <em>story-based</em> («Me conta da última vez que…»), o <strong>product trio</strong> (PM + design + engenharia), snapshots por entrevista. Conselho: começar com um «crummy first draft» do espaço de oportunidades e escolher uma oportunidade-alvo pequena o quanto antes. <strong>Antipadrões</strong>: obcecar por assumption tests e esquecer de percorrer os ramos; esquecer de testar a conexão product outcome ↔ business outcome.</p>
+
+<h3>Marty Cagan — <em>Inspired</em> (2018) / <em>Empowered</em> (2020)</h3>
+<p>Os <strong>Quatro Grandes Riscos</strong>: valor (vão comprar/usar?), usabilidade (vão saber usar?), factibilidade (conseguimos construir?), viabilidade de negócio (funciona para jurídico, finanças, vendas, marketing, marca?). O PM é responsável por valor e viabilidade; design pela usabilidade; engenharia pela factibilidade. Em B2B, a viabilidade inclui encaixe com o canal de vendas, contratos com parceiros, compliance, monetização e marca. Regra de julgamento: avaliar <strong>risco × consequência</strong> e rodar primeiro os testes mais baratos (valor e usabilidade antes de spikes de factibilidade).</p>
+
+<h3>Tony Ulwick — <em>Outcome-Driven Innovation / JTBD: Theory to Practice</em> (2016)</h3>
+<p>Um mercado = um grupo de pessoas + um <em>core functional job</em>. Um mercado típico tem 50–150 «desired outcomes» mensuráveis (200+ em domínios complexos como saúde). <strong>Job map</strong> de 8 passos. <strong>Opportunity algorithm</strong>: Importância + máx(Importância − Satisfação, 0). Um produto que faz o job 20%+ melhor «tem alta probabilidade de vencer». Relevante para B2B: ele distingue o <em>job executor</em> (usuário), o <em>product lifecycle support team</em> e o <em>buyer</em> — chave onde comprador ≠ usuário.</p>
+
+<h3>Christensen / Moesta — Jobs To Be Done</h3>
+<p>Christensen (<em>Competing Against Luck</em>, 2016): «Os clientes não compram produtos; eles os contratam para fazer um job». Um job tem dimensões <strong>funcional, emocional e social</strong> — as não-funcionais podem ser mais poderosas. Metáfora hire/fire: algo sempre precisa ser demitido para contratar o seu. Caso do milkshake: ~40% eram comprados logo cedo, por commuters, para tornar o trajeto mais divertido e segurar a fome até o almoço — o shake grosso no canudo fino fazia esse job melhor que uma banana ou um donut.</p>
+
+<h3>Bob Moesta — Four Forces (©2016) e <em>Demand-Side Sales 101</em> (2020)</h3>
+<p>As quatro forças: (1) <strong>Push</strong> da situação atual, (2) <strong>Pull</strong> da nova solução, (3) <strong>Anxiety</strong> da nova solução, (4) <strong>Habit</strong> do presente. O switch acontece quando <strong>Push + Pull &gt; Anxiety + Habit</strong>. O canto da ansiedade é «a mina de ouro». A <strong>switch interview / timeline interview</strong> reconstrói a linha do tempo de uma decisão de compra real e recente (primeiro pensamento → busca passiva → evento 1 → busca ativa → evento 2 → decisão → consumo); recruta-se quem «contratou» e quem «demitiu» o produto nos últimos 3–6 meses. <strong>Diferença para Torres</strong>: Moesta ancora no <em>momento do switch e suas forças</em> (episódico, para explicar causação); Torres ancora em <em>qualquer história recente para revelar oportunidades</em> (hábito semanal, generativo). Tese: «Grandes vendedores não vendem; ajudam as pessoas a progredir». Conceito de <strong>time wall</strong> como forçador de decisão.</p>
+
+<h2>4.5 Discovery B2B na prática</h2>
+<ul>
+<li><strong>Entrevistar separadamente</strong>: power users (gaps e fricção de workflow) e buyers econômicos (ciclos de orçamento, prioridades concorrentes, critérios de renovação). Pesquisas uniformes na conta inteira produzem médias que escondem diferenças entre papéis.</li>
+<li><strong>Vendas como fonte de insight</strong>: transcrições, calls de win/loss (entrevistar o buyer 3–4 semanas depois de uma proposta de expansão rejeitada, quando há mais franqueza), EBRs convertidos em sessões de research.</li>
+<li><strong>Não confundir satisfação com potencial de expansão</strong>: uma conta feliz sem job adjacente não compra mais.</li>
+<li><strong>Master list de perguntas B2B</strong> (Etienne Garbugli, <em>Lean B2B</em>): business drivers, intensidade da dor, propriedade do problema, decision-making unit («quem são as 4–6 pessoas que vão tomar esta decisão?»), processo de compra.</li>
+<li><strong>SPIN</strong> (Situation, Problem, Implication, Need-payoff): sequência para ir do fato superficial à dor de alto valor. A <em>Implication</em> (custo real) e o <em>Need-payoff</em> são os drivers da compra B2B.</li>
+<li><strong>Willingness to pay</strong>: não perguntar direto quanto pagariam (dirão o mínimo). Perguntar como especialistas de mercado quanto outra empresa pagaria, ou apresentar uma faixa e observar. Quantitativo: Van Westendorp, Gabor-Granger, conjoint, MaxDiff.</li>
+<li><em>The Mom Test</em> (Fitzpatrick): perguntar por comportamento passado, não por opiniões.</li>
+</ul>
+
+<h2>Prática</h2>
+<p>Escrever meu <strong>guia próprio de entrevista de discovery B2B</strong> (por papel: usuário / champion / buyer) e rodá-lo nas próximas 3 entrevistas.</p>
+
+<h2>Artefato</h2>
+<ul>
+<li>Guia de entrevista B2B próprio, com perguntas por papel e por objetivo (problema / switch / WTP).</li>
+<li>Um mapa de suposições real de uma iniciativa em andamento.</li>
+</ul>
+
+<div class="pager">
+<a class="prev" href="03-entender-el-producto.html">← 3 · Entender o produto</a>
+<a class="next" href="05-experimentacion.html">5 · Experimentação e validação →</a>
+</div>
+</main>
+</div>
+</body>
+</html>

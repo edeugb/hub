@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6 · Métricas · PM Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="../index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a href="../../es/guia/06-metricas.html">ES</a><a href="../../en/guia/06-metricas.html">EN</a><a class="active" href="06-metricas.html">PT</a></div>
+<form class="navsearch" action="../buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="../index.html">Início</a>
+<div class="nav-group">🧭 Guia</div>
+<a href="01-fundamentos.html">1 · Fundamentos de SaaS B2B</a>
+<a href="02-entender-la-empresa.html">2 · Entender a empresa</a>
+<a href="03-entender-el-producto.html">3 · Entender o produto</a>
+<a href="04-discovery.html">4 · Discovery</a>
+<a href="05-experimentacion.html">5 · Experimentação e validação</a>
+<a href="06-metricas.html" class="active">6 · Métricas</a>
+<a href="07-priorizacion.html">7 · Priorização e estratégia</a>
+<a href="08-definicion.html">8 · Definição: PRDs e specs</a>
+<a href="09-delivery.html">9 · Delivery e stakeholders</a>
+<a href="10-gtm.html">10 · Go-to-Market</a>
+<a href="11-crecimiento.html">11 · Modelos de crescimento</a>
+<div class="nav-group">Seções</div>
+<a href="../casos.html">🧪 Casos aplicados</a>
+<a href="../entrevistas.html">🎤 Preparação entrevistas</a>
+<a href="../experiment-log.html">📊 Experiment log</a>
+<a href="../backlog.html">🗺️ Backlog do hub</a>
+</nav>
+<main>
+<h1>6 · Métricas e medição de produto</h1>
+
+<h2>6.1 North Star Metric + árvore de métricas</h2>
+<ul>
+<li><strong>NSM</strong> (popularizada pela Amplitude): métrica-guia única que representa o <strong>valor entregue ao cliente</strong>; se sobe, o negócio cresce de forma sustentável. Por trás, <strong>input metrics</strong> — as alavancas acionáveis.</li>
+<li>Exemplo WFM: NSM = «marcações processadas sem intervenção manual»; inputs: adoção de módulos, taxa de configuração bem-sucedida, tickets por conta.</li>
+<li><strong>Input vs Output</strong>: outputs (features) não garantem outcomes; medir outcomes (comportamento do cliente no produto).</li>
+</ul>
+
+<h2>6.2 Frameworks</h2>
+<table>
+<thead><tr><th>Framework</th><th>Para quê</th><th>Nota</th></tr></thead>
+<tbody>
+<tr><td><strong>AARRR</strong> (McClure, 2007)</td><td>Funil completo: Acquisition, Activation, Retention, Revenue, Referral</td><td>Encontrar o gargalo (a conversão etapa-a-etapa mais baixa): «consertar o balde furado antes de jogar mais água». Exemplo de ativação B2B: «workspace criado + 3 colegas convidados + 1 integração conectada»</td></tr>
+<tr><td><strong>HEART</strong> (Google)</td><td>Qualidade de UX no nível de feature ou produto maduro: Happiness, Engagement, Adoption, Retention, Task success</td><td>Exige instrumentar eventos de início/fim de tarefa (mais esforço de engenharia)</td></tr>
+<tr><td><strong>GAME</strong></td><td>Goals → Actions → Metrics → Evaluation</td><td>Para instrumentar features novas</td></tr>
+</tbody>
+</table>
+<p>Eles se combinam: escolher a NSM de uma etapa do AARRR, usar o resto como inputs e adicionar HEART para a camada qualitativa de UX.</p>
+
+<h2>6.3 Métricas-chave de SaaS B2B (com benchmarks)</h2>
+<table>
+<thead><tr><th>Métrica</th><th>Definição</th><th>Benchmark</th></tr></thead>
+<tbody>
+<tr><td><strong>NRR / NDR</strong></td><td>(MRR inicial + expansão − contração − churn) / MRR inicial</td><td>Mediana ~106% (ChartMogul 2024, ~2.100 empresas VC) ou ~101% (SaaS Capital / Benchmarkit 2025). Por segmento: Enterprise (ACV &gt;US$ 100K) ~118%, Mid-Market ~108%, SMB ~97%. Pricing usage-based produz NRR mais alto (115–130%) que flat (95–105%): Snowflake 125%, Datadog ~120%. McKinsey: top quartil de NRR ~24× EV/Revenue vs ~5× o quartil inferior</td></tr>
+<tr><td><strong>GRR</strong></td><td>Retenção sem expansão, teto de 100%</td><td>«Impede que o NRR minta»: se a expansão mascara churn alto, é arriscado</td></tr>
+<tr><td><strong>Churn</strong></td><td>% de receita/contas que sai</td><td>Mensal médio B2B 3,5% (Recurly 2025); top &lt;2%. A 2% mensal, a vida média do cliente é ~50 meses; a 5%, colapsa para 20. Enterprise 0,5–1%; SMB/self-serve 3–7%. O churn involuntário pode ser até 48% do total → otimizar dunning</td></tr>
+<tr><td><strong>CAC payback</strong></td><td>Meses de gross profit para cobrir o CAC</td><td>Mediana ~16–20 meses (2024–25, Benchmarkit/Aleph), subiu dos 12–14 históricos. Saudável ≤12–18; top ≤6</td></tr>
+<tr><td><strong>LTV:CAC</strong></td><td>Valor de vida / custo de aquisição</td><td>Mediana ~3,2–3,6:1; piso 3:1; &gt;5:1 pode indicar subinvestimento. Aplicar haircut de gross margin e olhar <strong>por coorte</strong>: um blended de 3,2 pode esconder uma coorte recente de 1,8</td></tr>
+<tr><td><strong>Rule of 40</strong></td><td>Crescimento % + margem % ≥ 40</td><td>Difícil: a McKinsey achou que as empresas superaram só 16% do tempo (2011–2021); KeyBanc: 34% em 2023. Mediana 25%, top quartil 43% (Aleph×Benchmarkit 2026). Acima de 60 → prêmio de valuation de 2–3×</td></tr>
+<tr><td><strong>Magic Number</strong></td><td>ARR novo por dólar de S&amp;M</td><td>1.0+; top quartil &gt;2.0</td></tr>
+<tr><td><strong>Burn Multiple</strong></td><td>Net burn / net new ARR</td><td>Menor é melhor</td></tr>
+</tbody>
+</table>
+
+<h2>6.4 Métricas de adoção B2B</h2>
+<ul>
+<li><strong>Ativação por conta</strong> (não por usuário).</li>
+<li><strong>Breadth</strong> (quantos assentos usam?) × <strong>depth</strong> (com que intensidade?) × <strong>frequency</strong>.</li>
+<li><strong>Time-to-value</strong> e a curva de adoção de feature pós-lançamento.</li>
+</ul>
+
+<h2>6.5 Leading vs lagging</h2>
+<p>Churn é <strong>lagging</strong>; a queda no uso semanal do champion é <strong>leading</strong>. O trabalho do PM é encontrar os leading indicators do churn e da expansão.</p>
+
+<h2>6.6 Antipadrões</h2>
+<ul>
+<li>Vanity metrics (usuários cadastrados) — Ries: usar métricas acionáveis, por coorte, razões e não números brutos.</li>
+<li>Métricas sem dono; dashboards que ninguém olha; medir tudo e decidir com nada.</li>
+<li>Boa métrica (Croll/Yoskovitz, <em>Lean Analytics</em>): <strong>compreensível, comparativa, uma razão ou taxa, e que muda comportamento</strong>.</li>
+</ul>
+<p><strong>Recursos núcleo</strong>: <em>Lean Analytics</em>; os ensaios da Amplitude sobre North Star; a Lenny's Newsletter para benchmarks de adoção e retenção B2B.</p>
+
+<h2>Prática</h2>
+<p>Desenhar a árvore de métricas de um módulo que eu conheça: NSM do módulo, 3–4 input metrics, instrumentação necessária (quais eventos logar) e definir o critério de sucesso de um lançamento recente em números.</p>
+
+<h2>Artefato</h2>
+<ul>
+<li>Uma árvore de métricas documentada com a lógica causal explicada.</li>
+<li>Um template de «definição de sucesso de lançamento»: o que meço em 1 semana, 1 mês, 1 trimestre.</li>
+</ul>
+
+<div class="pager">
+<a class="prev" href="05-experimentacion.html">← 5 · Experimentação e validação</a>
+<a class="next" href="07-priorizacion.html">7 · Priorização e estratégia →</a>
+</div>
+</main>
+</div>
+</body>
+</html>

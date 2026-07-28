@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 · Entender el producto · PM Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="../index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a class="active" href="03-entender-el-producto.html">ES</a><a href="../../en/guia/03-entender-el-producto.html">EN</a><a href="../../pt/guia/03-entender-el-producto.html">PT</a></div>
+<form class="navsearch" action="../buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="../index.html">Inicio</a>
+<div class="nav-group">🧭 Guía</div>
+<a href="01-fundamentos.html">1 · Fundamentos SaaS B2B</a>
+<a href="02-entender-la-empresa.html">2 · Entender la empresa</a>
+<a href="03-entender-el-producto.html" class="active">3 · Entender el producto</a>
+<a href="04-discovery.html">4 · Discovery</a>
+<a href="05-experimentacion.html">5 · Experimentación y validación</a>
+<a href="06-metricas.html">6 · Métricas</a>
+<a href="07-priorizacion.html">7 · Priorización y estrategia</a>
+<a href="08-definicion.html">8 · Definición: PRDs y specs</a>
+<a href="09-delivery.html">9 · Delivery y stakeholders</a>
+<a href="10-gtm.html">10 · Go-to-Market</a>
+<a href="11-crecimiento.html">11 · Modelos de crecimiento</a>
+<div class="nav-group">Secciones</div>
+<a href="../casos.html">🧪 Casos aplicados</a>
+<a href="../entrevistas.html">🎤 Preparación entrevistas</a>
+<a href="../experiment-log.html">📊 Experiment log</a>
+<a href="../backlog.html">🗺️ Backlog del hub</a>
+</nav>
+<main>
+<h1>3 · Entender el producto</h1>
+
+<p>Producto principal, módulos adicionales, métricas actuales de cada uno.</p>
+
+<h2>3.1 Las preguntas base por producto</h2>
+<ul>
+<li><strong>¿Qué trabajo resuelve y para quién?</strong> (JTBD — ver <a href="04-discovery.html">Discovery</a>)</li>
+<li><strong>¿En qué etapa está?</strong> Exploración (buscando fit), crecimiento (escalando), madurez (defendiendo).</li>
+<li><strong>La etapa decide la métrica</strong>: fit y activación vs. expansión vs. retención y eficiencia.</li>
+<li><strong>Recorrer el happy path y sobre todo las excepciones</strong> — ahí está el valor del PM.</li>
+</ul>
+
+<h2>3.2 El ciclo de vida decide el playbook</h2>
+<p>El tipo y cantidad de discovery, la forma de levantar demanda y la de validarla <strong>cambian radicalmente por etapa</strong>. Modelo clásico (Levitt, «Exploit the Product Life Cycle», HBR 1965; Vernon 1966): Desarrollo → Introducción → Growth → Madurez → Declive.</p>
+<p><strong>Regla operativa: no aplicar el mismo playbook en etapas distintas.</strong> En etapas tempranas se juega ofensiva (discovery generativo, riesgo de valor); en madurez, defensiva (retención, eficiencia, NRR).</p>
+
+<table>
+<thead><tr><th>Etapa</th><th>Discovery</th><th>Levantar demanda</th><th>Validar demanda</th><th>Riesgo dominante (Cagan)</th><th>Métricas</th></tr></thead>
+<tbody>
+<tr><td><strong>0→1</strong></td><td>Máximo, generativo. ~30 entrevistas antes de sentirse seguro (algunos founders hacen 75 en 2–3 semanas, ej. Zip)</td><td>Founder-led sales, design partners</td><td>Fake door, landing, pre-ventas, LOI</td><td>Valor</td><td>Cualitativas: patrones no inducidos, problem-validations, señales de WTP</td></tr>
+<tr><td><strong>PoC</strong></td><td>Enfocado: factibilidad + valor con UN caso acotado</td><td>1–3 cuentas ancla que co-construyen</td><td>Éxito contra criterios pass/fail <strong>pre-acordados</strong></td><td>Factibilidad + viabilidad</td><td>Cumplimiento de criterios del PoC</td></tr>
+<tr><td><strong>MVP</strong></td><td><em>Validated learning</em> (Ries): loop Build-Measure-Learn</td><td>De founder-led a 2–3 canales repetibles</td><td>Activación real, trial→paid, uso repetido; Sean Ellis test (40% «muy decepcionado»)</td><td>Valor + usabilidad</td><td>Activación, conversión</td></tr>
+<tr><td><strong>Growth</strong></td><td>Continuo, optimizador: desatascar el cuello de botella</td><td>Growth loops (Reforge), elegir motion, doblar en canales que rinden (~6 meses para cortar)</td><td>Experimentación (A/B si hay volumen; si no, bayesiano/secuencial/micro-conversiones)</td><td>Escalabilidad, unit economics</td><td>AARRR, activación, NRR emergente, CAC payback</td></tr>
+<tr><td><strong>Maduro</strong></td><td>Dirigido a expansión/retención: buyer económico, no-usuarios dentro de la cuenta, EBRs como research</td><td>Land &amp; expand, cross-sell, verticales adyacentes</td><td>Opportunity scoring en base instalada, cohortes, tests de pricing</td><td>Disrupción, feature bloat, commoditización</td><td>NRR, GRR, churn, expansion ARR, Rule of 40</td></tr>
+</tbody>
+</table>
+
+<p>Datos de anclaje: escalando de $1M a $20M ARR el NRR sube ~12 pp en el camino (High Alpha 2025). En producto maduro, según el Pendo Feature Adoption Report (2019): ~12% de las features generan el 80% del uso diario; el 80% de las features rara vez o nunca se usan — guía directa para podar.</p>
+
+<h2 id="s33">3.3 Tipo de iniciativa × métrica que mueve</h2>
+<p><em>(Respuesta a mi pregunta abierta: sí hay una relación, y conviene hacerla explícita antes de priorizar.)</em></p>
+<p>Cada tipo de iniciativa tiene una métrica primaria «natural» y métricas donde su efecto es indirecto o nulo. Evaluar una iniciativa con la métrica equivocada la mata injustamente (o la aprueba sin razón).</p>
+
+<table>
+<thead><tr><th>Iniciativa</th><th>Métrica primaria</th><th>Efecto en NRR</th><th>Efecto en CAC / payback</th><th>Cómo justificarla</th></tr></thead>
+<tbody>
+<tr><td><strong>Feature nuevo (expansión)</strong></td><td>Attach rate del módulo, expansion ARR</td><td>⬆ Directo (expansión sube NRR)</td><td>Neutro-positivo: vender a base instalada tiene CAC ~0, mejora payback blended</td><td>Palanca B: «este módulo agrega $X de expansion MRR a Y% de la base»</td></tr>
+<tr><td><strong>Feature nuevo (adquisición)</strong></td><td>Win rate, pipeline generado, deals desbloqueados</td><td>Neutro a corto plazo</td><td>⬇ CAC si sube win rate (mismo gasto S&amp;M, más cierres)</td><td>Palanca A: «cerramos el gap que nos hace perder Z deals/trimestre»</td></tr>
+<tr><td><strong>Deuda técnica</strong></td><td>Ninguna directa — es un <strong>habilitador</strong></td><td>⬆ Indirecto: menos incidentes → menos churn por calidad</td><td>⬆ Indirecto: velocity → más iniciativas A/B/C por trimestre</td><td>Traducirla a riesgo: «sin esto, el costo de cada release sube X% y el riesgo de incidente en cuentas enterprise es Y». Nunca venderla como «limpieza»</td></tr>
+<tr><td><strong>Fix de retención</strong></td><td>Churn / GRR, uso semanal del champion (leading)</td><td>⬆ Directo (menos contracción/churn)</td><td>⬆ Payback: cada mes extra de vida del cliente amortiza el CAC ya pagado</td><td>Palanca C: «las cuentas con este dolor churnean a X%, el fix protege $Y de MRR»</td></tr>
+</tbody>
+</table>
+
+<p><strong>Regla</strong>: la deuda técnica y la infraestructura no compiten con features en la misma métrica — compiten por un <strong>% de capacidad protegido</strong> (ver <a href="07-priorizacion.html">Priorización</a>). Intentar justificarlas con NRR directo es perder la discusión.</p>
+
+<h2>3.4 Escuchar a los clientes</h2>
+<p>Qué buscan, cuáles son sus dolores… <strong>comienza el <a href="04-discovery.html">Discovery</a></strong> →</p>
+
+<h2>Práctica</h2>
+<p>Clasificar los productos/módulos de tu empresa por etapa y verificar: ¿el playbook que se les aplica corresponde a su etapa? Documentar un desajuste (ej.: producto maduro gestionado con métricas de growth).</p>
+
+<h2>Artefacto</h2>
+<ul>
+<li>Un mapa de portafolio: producto × etapa × métrica que corresponde × métrica que se usa hoy (y el gap).</li>
+</ul>
+
+<div class="pager">
+<a class="prev" href="02-entender-la-empresa.html">← 2 · Entender la empresa</a>
+<a class="next" href="04-discovery.html">4 · Discovery →</a>
+</div>
+</main>
+</div>
+</body>
+</html>

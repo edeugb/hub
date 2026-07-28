@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1 · Fundamentos SaaS B2B · PM Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="layout">
+<nav>
+<div class="brand"><a href="../index.html">PM Hub · SaaS B2B</a></div>
+<div class="langbar"><a class="active" href="01-fundamentos.html">ES</a><a href="../../en/guia/01-fundamentos.html">EN</a><a href="../../pt/guia/01-fundamentos.html">PT</a></div>
+<form class="navsearch" action="../buscar.html"><input type="search" name="q" placeholder="🔍 Buscar…" aria-label="Buscar…"></form>
+<a href="../index.html">Inicio</a>
+<div class="nav-group">🧭 Guía</div>
+<a href="01-fundamentos.html" class="active">1 · Fundamentos SaaS B2B</a>
+<a href="02-entender-la-empresa.html">2 · Entender la empresa</a>
+<a href="03-entender-el-producto.html">3 · Entender el producto</a>
+<a href="04-discovery.html">4 · Discovery</a>
+<a href="05-experimentacion.html">5 · Experimentación y validación</a>
+<a href="06-metricas.html">6 · Métricas</a>
+<a href="07-priorizacion.html">7 · Priorización y estrategia</a>
+<a href="08-definicion.html">8 · Definición: PRDs y specs</a>
+<a href="09-delivery.html">9 · Delivery y stakeholders</a>
+<a href="10-gtm.html">10 · Go-to-Market</a>
+<a href="11-crecimiento.html">11 · Modelos de crecimiento</a>
+<div class="nav-group">Secciones</div>
+<a href="../casos.html">🧪 Casos aplicados</a>
+<a href="../entrevistas.html">🎤 Preparación entrevistas</a>
+<a href="../experiment-log.html">📊 Experiment log</a>
+<a href="../backlog.html">🗺️ Backlog del hub</a>
+</nav>
+<main>
+<h1>1 · Fundamentos: características del SaaS B2B</h1>
+
+<h2>Lo que hace todo distinto al SaaS B2B de un B2C es estructural:</h2>
+<ul>
+<li><strong>Comprador ≠ usuario ≠ champion.</strong> Quien firma (buyer económico), quien usa (usuario final) y quien evalúa/empuja internamente (champion) son personas distintas, con motivaciones distintas. Cada decisión de producto tiene que responder a los tres.</li>
+</ul>
+<div class="aside aside-note">
+<div class="aside-title">🧠 ¿A qué se refiere «responder a los tres»?</div>
+<p>El champion no firma el contrato ni usa el producto día a día — es quien lo defiende puertas adentro: arma el caso de negocio, consigue el presupuesto, calma las objeciones de otros equipos. Sin su apoyo interno, ni el mejor producto llega al buyer. Por eso cada feature o cambio de UX se piensa desde tres ángulos a la vez: ¿el usuario lo puede operar sin fricción?, ¿el buyer ve el ROI que justifica el gasto?, ¿el champion tiene con qué defenderlo en la próxima reunión de presupuesto? Ignorar cualquiera de los tres deja al producto sin quien lo compre, sin quien lo use bien, o sin quien lo sostenga cuando llegue la renovación.</p>
+</div>
+<ul>
+<li><strong>Comités de compra de 6–10 personas</strong> y <strong>ciclos de venta de 3–12 meses</strong> (≈84 días para deals &lt;$25K ACV; 6+ meses en enterprise). La viabilidad de negocio (Cagan) pesa más que en B2C.</li>
+</ul>
+<div class="aside aside-note">
+<div class="aside-title">🧠 ¿Qué es el ACV y por qué me importa como PM?</div>
+<p><strong>ACV — Annual Contract Value (Valor Anual del Contrato):</strong> el dinero que paga un cliente por sus suscripciones en un año. Está agregado a la tabla de métricas de empresa más abajo.</p>
+<p>El ACV determina el juego completo que se juega: cuántas conversaciones hacen falta para cerrar una venta, qué tan robusto tiene que ser el onboarding, cuánto compliance y seguridad hay que construir antes de vender, y qué tan personalizable necesita ser el producto. Un ACV bajo empuja hacia self-serve y features genéricas; un ACV alto empuja hacia configurabilidad, integraciones a medida, SLAs y un equipo de éxito de cliente dedicado. Diseñar producto sin saber el ACV objetivo es diseñar a ciegas.</p>
+</div>
+<ul>
+<li><strong>Contratos</strong> — cláusulas, compliance, SLAs. La viabilidad de negocio (Cagan) pesa más que en B2C.</li>
+<li><strong>Expansión/NRR como motor de crecimiento.</strong> Según el High Alpha 2025 SaaS Benchmarks Report, las empresas sobre $50M ARR generan ~60% de su ARR nuevo desde clientes existentes, no desde logos nuevos.</li>
+</ul>
+
+<h2>El NRR y luego el MRR mandan</h2>
+<p>En B2B SaaS la retención vale más que la adquisición.</p>
+
+<h3>Entendiendo el NRR</h3>
+<p>La adquisición (el MRR) trae ventas nuevas, pero la retención defiende y garantiza la base: con retención alta, la base de ARR crece predeciblemente cada mes y baja la presión de empezar de cero cada trimestre.</p>
+<p><strong>Net Revenue Retention</strong> (es la <strong>Retención neta</strong>). Es una métrica clave en modelos de negocio de suscripción (como SaaS). Revela la salud financiera, el crecimiento orgánico y el nivel de satisfacción de la base de clientes de una empresa.</p>
+<p>Se analizan tres variables fundamentales dentro de la base de clientes actual:</p>
+<ul>
+<li><strong>Expansión:</strong> ingresos adicionales generados por clientes actuales a través de upselling o cross-selling (vender más o mejores licencias).</li>
+<li><strong>Contracciones (Downgrades):</strong> pérdida de ingresos porque los clientes reducen su plan o degradan su servicio.</li>
+<li><strong>Cancelaciones (Churn):</strong> ingresos perdidos por clientes que abandonan la empresa por completo.</li>
+</ul>
+
+<p><strong>a) Superior al 100%:</strong> significa que las ventas adicionales a clientes actuales superan el dinero perdido por cancelaciones. La empresa crece de forma rentable sin depender únicamente de adquirir clientes nuevos. Si tu NRR es, por ejemplo, del 115%: tu base de clientes existente gastó un 15% más este año que el año anterior. Es decir, incluso si tu equipo de ventas no consigue ni un solo cliente nuevo, tu empresa crecerá un 15%.</p>
+
+<div class="aside aside-note">
+<div class="aside-title">🧠 ¿Cuál es la estrategia con NRR bajo (harta fuga y/o bajo MRR)?</div>
+<p>Depende de cuál de las tres variables está fallando:</p>
+<ul>
+<li><strong>Si el problema es fuga (churn) alta:</strong> el diagnóstico es de producto y CS, no de ventas. Revisar por qué se van (soporte, calidad, fricción), atacar primero los quiebres de calidad desde el lanzamiento, y priorizar fixes de retención sobre features nuevas hasta frenar la sangría (ver el diagnóstico rápido en <a href="02-entender-la-empresa.html">Entender la empresa</a>).</li>
+<li><strong>Si el problema es bajo MRR/expansión:</strong> la base no está creciendo su gasto — señal de que no se están resolviendo dolores lo suficientemente rentables, o que el pricing no captura el valor real que se entrega. Volver a validar el dolor (ver <a href="04-discovery.html">Discovery</a>) y revisar si existe un camino natural de expansión (más asientos, mejor plan, módulos adicionales).</li>
+<li><strong>Regla general:</strong> arreglar la retención ANTES de invertir más en adquisición. Crecer sobre una base que gotea solo acelera el quemado de caja — cada cliente nuevo reemplaza a uno que se fue, en vez de sumar.</li>
+</ul>
+</div>
+
+<p><strong>b) En 100%:</strong> sobre 100% = creces sin vender a nadie nuevo. El dinero extra que ganás (mejoras de plan, más licencias) es igual al dinero que perdés (cancelaciones, reducciones de plan). El negocio no crece por sí solo, pero tampoco se encoge. Para aumentar los ingresos totales de un año a otro, se depende 100% de vender a nuevos clientes.</p>
+
+<p><strong>c) Inferior al 100%:</strong> indica que la empresa está perdiendo más ingresos de los que expande. Esto obliga a gastar más en marketing para «tapar el hueco» que dejan los clientes que se van.</p>
+
+<p>Un SaaS con NRR &gt;110% crece sin vender a nadie nuevo. Debería ser superior a 101% (ChartMogul, Benchmarkit) o con 0,1% de fuga.</p>
+
+<h3>Conocimiento de industria</h3>
+<ul>
+<li>Adquirir cuesta 5–10× más que retener → si los usuarios no se quedan, la adquisición cara (proceso de venta consultiva, calificación, equipos comerciales enteros) no se paga y no hay negocio.</li>
+</ul>
+<div class="aside aside-note">
+<div class="aside-title">🧠 ¿Cuál es el aumento de ticket objetivo en la industria, y qué implica como PM?</div>
+<p>Como referencia de industria, las empresas SaaS B2B maduras suelen apuntar a que la cuenta promedio expanda su gasto entre 10% y 30% anual — consistente con los ~12 puntos porcentuales de suba en NRR que reporta High Alpha al escalar de $1M a $20M ARR (ver <a href="03-entender-el-producto.html">Entender el producto</a>).</p>
+<p>Como PM esto implica que una parte fija del roadmap tiene que estar dedicada a features de expansión (mejores planes, módulos adicionales, upsell natural) y no solo a features de adquisición — es la palanca B de las tres palancas (Adquisición / Expansión / Retención) que aparecen en el próximo capítulo.</p>
+</div>
+<ul>
+<li>Por eso, la <strong>expansión/NRR</strong> es clave en el motor de crecimiento. Según el High Alpha 2025 SaaS Benchmarks Report, las empresas sobre $50M ARR generan ~60% de su ARR nuevo desde clientes existentes. Aquí es donde entra también producto: aumentar el ticket existente, modelo de planes, especialización en verticales.</li>
+<li>Retener tiene márgenes altísimos (el desarrollo y onboarding ya están pagados) y empuja el <strong>Magic Number</strong> hacia arriba.</li>
+<li>Bajar churn dispara el LTV, y vender expansión a un cliente que confía es mucho más barato que venderle a un extraño.</li>
+</ul>
+
+<h2>Métricas de empresa de un SaaS B2B</h2>
+<table>
+<thead><tr><th>Métrica</th><th>Significado</th><th>Qué es</th><th>Referencia sana</th></tr></thead>
+<tbody>
+<tr><td>MRR / ARR</td><td>Ingreso recurrente mensual / anual</td><td>Excluye fees únicos y servicios</td><td>—</td></tr>
+<tr><td>NRR</td><td>Net Revenue Retention (Retención neta)</td><td>(MRR inicial + expansión − contracción − churn) / MRR inicial</td><td>&gt;100% creces sin vender a nadie nuevo; mediana ~101–106%</td></tr>
+<tr><td>GRR</td><td>Gross Revenue Retention (Retención bruta)</td><td>Retención sin expansión (tope 100%)</td><td>«Impide que el NRR mienta»</td></tr>
+<tr><td>CAC</td><td>Customer Acquisition Cost</td><td>Costo de adquirir un cliente</td><td>5–10× más caro adquirir que retener</td></tr>
+<tr><td>CAC Payback</td><td>Período de recuperación del CAC</td><td>Meses en recuperar el CAC</td><td>&lt;12–18 sano; mediana actual ~16–20</td></tr>
+<tr><td>LTV</td><td>Lifetime Value (Valor de vida del cliente)</td><td>Ingreso total esperado de un cliente durante toda su relación con la empresa</td><td>Se compara siempre contra el CAC, nunca solo</td></tr>
+<tr><td>LTV:CAC</td><td>Relación valor de vida / costo de adquisición</td><td>Valor de vida vs costo de adquisición</td><td>~3:1 piso; &gt;5:1 puede ser sub-inversión en growth</td></tr>
+<tr><td>Gross margin</td><td>Margen bruto</td><td>Ingreso menos costo directo de servir</td><td>Retener tiene márgenes 80%+</td></tr>
+<tr><td>Magic Number</td><td>Eficiencia de go-to-market</td><td>ARR nuevo por dólar de S&amp;M</td><td>1.0+; top-quartil &gt;2.0</td></tr>
+<tr><td>Rule of 40</td><td>Balance crecimiento/rentabilidad</td><td>Crecimiento % + margen % ≥ 40</td><td>Solo ~16–34% de las SaaS lo cumplen según el año</td></tr>
+<tr><td>ACV</td><td>Annual Contract Value (Valor Anual del Contrato)</td><td>El dinero que paga un cliente por sus suscripciones en un año</td><td>—</td></tr>
+<tr><td>ARPA</td><td>Average Revenue Per Account (Ingreso promedio por cuenta)</td><td>Ticket promedio por cuenta — el «tamaño de cliente» real</td><td>—</td></tr>
+</tbody>
+</table>
+
+<p><strong>Por qué la retención le gana a la adquisición</strong> (el hilo que conecta todo):</p>
+<ol>
+<li>Adquirir cuesta 5–10× más que retener → si los usuarios no se quedan, la adquisición cara reemplaza revenue perdido para siempre.</li>
+<li>El CAC es un «préstamo» que se recupera mes a mes → churn antes del payback = pérdida directa de caja en esa cuenta.</li>
+<li>LTV se multiplica por la duración → bajar churn dispara LTV, y vender expansión a un cliente que confía es mucho más barato que venderle a un extraño.</li>
+<li>Retener tiene márgenes altísimos (el desarrollo y onboarding ya están pagados) y empuja el Magic Number hacia arriba.</li>
+</ol>
+
+<h2>Relación entre NRR y otras métricas</h2>
+
+<h3>CAC</h3>
+<p>Por qué gana la retención: adquirir un cliente B2B nuevo es increíblemente caro. Típicamente cuesta entre 5× y 10× más adquirir un cliente nuevo que retener uno existente. Si los usuarios no se quedan, hay que invertir constantemente en adquisición cara para reemplazar el ingreso perdido, estancando la rentabilidad de forma permanente.</p>
+
+<h3>CAC Payback Period</h3>
+<p>Por qué gana la retención: como los clientes SaaS son caros de adquirir, no se gana dinero con ellos de inmediato. Se les «presta» el CAC y se lo recupera mes a mes. Si un cliente hace churn antes del período de payback, la empresa sufre una pérdida directa de flujo de caja en esa cuenta específica.</p>
+
+<h3>LTV</h3>
+<p>Por qué gana la retención: el LTV se multiplica fuertemente por el tiempo que un cliente se queda. Con solo bajar el churn (alargar la vida del cliente), el LTV se dispara. Además, es mucho más fácil y barato vender mejoras o add-ons (ingreso de expansión) a un cliente existente que confía, que venderle a un desconocido.</p>
+
+<h3>Gross margin</h3>
+<p>Por qué gana la retención: retener a un cliente existente tiene márgenes brutos altísimos (a menudo 80%+) porque el trabajo pesado de desarrollo de producto y onboarding ya está pagado.</p>
+
+<h3>Magic Number (la medida de eficiencia)</h3>
+<p><strong>Qué es:</strong> el Magic Number de SaaS mide la eficiencia de go-to-market, mostrando exactamente cuántos dólares de ARR se generan por cada dólar gastado en ventas y marketing.</p>
+<p><strong>Por qué gana la retención:</strong> un Magic Number alto indica que ventas y marketing son muy eficientes. Como la retención tiene un costo de adquisición adicional casi nulo, invertir en éxito del cliente y retención empuja el Magic Number hacia arriba de forma dramática, resultando en negocios altamente atractivos y escalables que los VCs y compradores buscan activamente.</p>
+
+<div class="aside aside-note">
+<div class="aside-title">🧠 ¿Se compite por precio o por especialización?</div>
+<p>Casi siempre conviene lo segundo. Competir por precio erosiona el margen y el CAC al mismo tiempo (se vende más barato Y se gasta lo mismo en adquirir), lo que hunde el Magic Number por partida doble. Especializarse en un vertical o nicho — y ganarse una reputación ahí — baja el CAC por reputación y referidos, y sostiene el ticket, mejorando el Magic Number sin sacrificar margen. Es la lógica detrás de estrategias de posicionamiento tipo «big fish, small pond» que se ven en el capítulo de <a href="10-gtm.html">Go-to-Market</a>.</p>
+</div>
+
+<h2>Modelos de negocio SaaS B2B</h2>
+<p>Generalmente son variaciones o combinaciones de tres modelos:</p>
+<ol type="a">
+<li><strong>Suscripción por asiento/usuario</strong> — el más simple: se cobra por persona con acceso al producto. Fácil de entender y de vender, pero no siempre refleja el valor entregado (un cliente grande que usa poco paga lo mismo que uno chico que usa mucho).</li>
+<li><strong>Por consumo/uso</strong> — se cobra por unidad de valor entregado (transacciones procesadas, empleados gestionados, registros, API calls). Escala junto con el uso real del cliente, pero es más difícil de pronosticar tanto para el cliente como para la empresa.</li>
+<li><strong>Por módulo o tramos (tiered)</strong> — planes empaquetados (Good/Better/Best) que combinan features, límites de uso y nivel de soporte. Es el modelo dominante en el SaaS B2B híbrido porque da una vía de expansión natural: el cliente sube de tramo en vez de tener que renegociar el contrato entero.</li>
+</ol>
+<p>En la práctica, la mayoría de los SaaS B2B maduros combinan los tres: una base de suscripción por asiento o por tramo, con componentes de uso encima (ej.: el plan incluye X transacciones, las adicionales se cobran aparte).</p>
+<ul>
+<li><strong>Streams de ingreso:</strong> suscripción, uso, setup, servicios. ¿Cuál es recurrente y cuál no?</li>
+<li><strong>Pricing y empaquetado:</strong> por asiento, por consumo, por módulo, por tramos.</li>
+</ul>
+
+<h2>Relación entre ACV y GTM motion</h2>
+<p>La estrategia de GTM motion (movimiento Go-to-Market) es la lógica operativa que usa una empresa para generar demanda, convertir prospectos y escalar las ventas de un producto en el mercado.</p>
+<p>En la estrategia de producto, el motion define la ruta principal para captar usuarios. Los tres enfoques principales son:</p>
+<ul>
+<li><strong>Product-Led Growth (PLG):</strong> el producto se encarga de la adquisición, retención y expansión. Los usuarios prueban el producto por sí mismos (ej. versiones freemium o pruebas gratuitas) antes de hablar con un equipo de ventas.</li>
+<li><strong>Sales-Led Growth (SLG):</strong> depende de un equipo de ventas tradicional (outbound/inbound). Se enfoca en cuentas grandes (B2B Enterprise), donde los representantes guían al cliente en el proceso de compra y negociación.</li>
+<li><strong>Marketing-Led Growth (MLG):</strong> el crecimiento se impulsa mediante campañas de marketing a gran escala, webinars y contenido educativo que nutre a los prospectos hasta que están listos para la compra.</li>
+</ul>
+<p>El GTM motion / modelo de crecimiento debe alinearse al ACV y a la complejidad del comprador:</p>
+<table>
+<thead><tr><th>ACV</th><th>Motion</th><th>Características</th></tr></thead>
+<tbody>
+<tr><td>Bajo (&lt;$5K)</td><td>PLG puro</td><td>Usuario = comprador; self-serve; necesitas ~10× más clientes</td></tr>
+<tr><td>Medio ($5K–$50K)</td><td>Híbrido</td><td>Self-serve para entrar, ventas para expandir. <strong>El default actual sobre ~$10M ARR</strong></td></tr>
+<tr><td>Alto (&gt;$50K)</td><td>Sales-led</td><td>Comité de compra, demo → piloto → contrato, ciclos largos</td></tr>
+</tbody>
+</table>
+
+<div class="aside">
+<div class="aside-title">💡 Regla operativa</div>
+<p>Antes de opinar sobre roadmap, pricing o canal en cualquier empresa: ubica sus métricas de empresa clave (al menos MRR y NRR), su modelo de negocio, y su estrategia. Esto se profundiza en el <a href="02-entender-la-empresa.html">capítulo 2</a> junto a artefactos y casos.</p>
+</div>
+
+<div class="pager">
+<a class="prev" href="../index.html">← Inicio</a>
+<a class="next" href="02-entender-la-empresa.html">2 · Entender la empresa →</a>
+</div>
+</main>
+</div>
+</body>
+</html>
